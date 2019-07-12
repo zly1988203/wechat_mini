@@ -1,0 +1,32 @@
+export default [
+    {
+        "label":'今天',
+        "value":'07-12',
+        "children":[
+            {
+                "label":'15:00-15:30',
+                "value":'15:00',
+            }
+        ]
+    },
+    {
+        "label":'明天',
+        "value":'07-13',
+        "children":[
+            {
+                "label":'15:30-16:30',
+                "value":'15:30',
+            }
+        ]
+    },
+    {
+        "label":'07-14',
+        "value":'07-14',
+        "children":[
+            {
+                "label":'15:30-16:30',
+                "value":'15:30',
+            }
+        ]
+    }
+]

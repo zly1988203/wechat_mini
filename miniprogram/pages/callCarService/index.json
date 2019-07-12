@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "下单",
+  "usingComponents": {
+    "wux-cell-group": "../../dist/cell-group/index",
+    "wux-cell": "../../dist/cell/index",
+    "wux-select": "../../dist/select/index",
+    "wux-row":"../../dist/row/index",
+    "wux-col":"../../dist/col/index",
+    "wux-cascader": "../../dist/cascader/index"
+  }
+}

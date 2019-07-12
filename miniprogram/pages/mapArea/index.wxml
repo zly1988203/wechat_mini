@@ -1,0 +1,33 @@
+<view class="page">
+    <wux-search-bar class="search-input" show-cancel value="{{searchObj.searchKey}}" controlled  focus bind:change="searchByTxt" bind:cancel="searchCancle"/>
+
+<view class="section map_container">
+    <map id="loactionMap" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true"
+         polyline="{{polyline}}"   markers = "{{markers}}"
+         style="width: {{mapWidth}}px; height: {{mapHeight}}px;" bindregionchange="regionChange">
+        <cover-view class="searchRes" hidden="{{searchObj.isShow}}">
+            <block wx:for="{{searchRes}}" wx:key="id">
+            <cover-view class="corver-item" data-district ="{{item.ad_info.district}}"  data-city="{{item.ad_info.city}}"
+                        data-address="{{item.address}}"
+                         data-latitude="{{item.location.lat}}" data-longitude="{{item.location.lng}}" bindtap="onSearchAdrs">
+                <cover-image class="item-img" src="../../images/map/icon-local.png"></cover-image>
+                <cover-view class="item-content">
+                    <cover-view class="title">
+                        {{item.title}}
+                    </cover-view>
+                    <cover-view class="address">
+                        {{item.address}}
+                    </cover-view>
+                </cover-view>
+                    <button type="primary" plain="{{plain}}"
+                            data-city="{{item.ad_info.city}}"
+                            data-title="{{item.title}}"
+                            data-latitude="{{item.location.lat}}" data-longitude="{{item.location.lng}}"
+                            disabled="{{disabled}}" bindtap="onSelAdrs"> 确定 </button>
+
+            </cover-view>
+            </block>
+        </cover-view>
+    </map>
+</view>
+</view>

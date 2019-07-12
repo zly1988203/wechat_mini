@@ -1,0 +1,19 @@
+/* pages/login/index.wxss */
+.page{
+    align-items: center;
+    margin: 20rpx;
+}
+
+.image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50rpx;
+}
+
+.image image{
+    width: 250rpx;
+    height: 250rpx;
+    margin: 0 auto;
+    border-radius: 100%;
+}

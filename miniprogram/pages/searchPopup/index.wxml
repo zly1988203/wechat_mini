@@ -1,0 +1,58 @@
+<view class="page">
+    <view>
+        <wux-search-bar class="search-input" show-cancel value="{{searchObj.searchKey}}" controlled  focus bind:change="searchByTxt" bind:cancel="searchCancle"/>
+        <!--<wux-input class="search-input" placeholder="请输入关键字"  bind:change="seatchByTxt"></wux-input>-->
+    </view>
+
+    <view  class="page"  hidden="{{searchObj.isShow}}">
+        <wux-cell-group>
+            <block wx:for="{{searchRes}}" wx:key="id">
+                <wux-cell  thumb="../../images/map/icon-local.png"
+                           title="{{item.title}}" label="{{item.address}}"
+                           data-title="{{item.title}}" data-address="{{item.address}}"
+                           data-district ="{{item.ad_info.district}}"
+                           data-city="{{item.ad_info.city}}"
+                           bind:click="onSearchAdrs" ></wux-cell>
+            </block>
+
+        </wux-cell-group>
+    </view>
+
+    <view class="loca-content">
+        <wux-cell-group>
+            <wux-cell title="当前位置">
+                <view class="tag-list">
+                    <wux-tag color="#2db7f5">{{adrsInfo.departTitle}}</wux-tag>
+                    <wux-tag color="#2db7f5">{{adrsInfo.departTitle}}</wux-tag>
+                </view>
+
+            </wux-cell>
+        </wux-cell-group>
+    </view>
+    <view class="page__bd page__bd_spacing open-city">
+        <view class="sub-title title">已开通城市</view>
+        <block wx:for="{{areaList}}" wx:key="id">
+            <view class="sub-title city-name">{{item.name}}</view>
+            <block wx:for="{{item.childrenAreaList}}"  wx:for-item="child" wx:key="id">
+                <wux-tag color="#2db7f5"  title="{{child.name}}"
+                         data-area-id="{{item.areaId}}"
+                         data-title="{{child.name}}"
+                         data-city="{{item.name}}"
+                         bind:click="onSearchArea"
+                >{{child.name}}</wux-tag>
+                <block wx:for="{{child.stationList}}" wx:for-item="station" wx:key="id">
+                    <wux-tag title="{{station.stationName}}"
+                             data-area-id="{{item.areaId}}"
+                             data-title="{{station.stationName}}"
+                             data-city="{{item.name}}"
+                             data-district="{{child.name}}"
+                             data-latitude="{{station.gaodeLatitude}}"
+                             data-longitude="{{station.gaodeLongitude}}"
+                             bind:click="onSearchAdrs"
+                    >{{station.stationName}}</wux-tag>
+                </block>
+            </block>
+
+        </block>
+    </view>
+</view>

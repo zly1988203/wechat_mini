@@ -1,0 +1,36 @@
+.head{
+    width: 100%;
+}
+
+.swp-panel{
+    width: 100%;
+}
+
+.swp-panel image{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.page-body{
+   margin: 20rpx;
+}
+
+.search-bar{
+    background: #ffffff;
+}
+.search-cell{
+    display: flex;
+}
+
+.search-input{
+    text-align: left;
+    color: black;
+}
+
+
+wux-cell image{
+    width: 30rpx!important;
+}
+
+

@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/main/index",
+    "pages/login/index",
+    "pages/orders/index",
+    "pages/userCenter/index",
+    "pages/userCenter/tripList/index",
+    "pages/userCenter/active/index",
+    "pages/userCenter/coupons/index",
+    "pages/mapArea/index",
+    "pages/searchPopup/index",
+    "pages/callCarService/index"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#888888",
+    "selectedColor": "#2c2c2c",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/main/index",
+        "iconPath": "images/tabBar/main.png",
+        "selectedIconPath": "images/tabBar/main-active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/orders/index",
+        "iconPath": "images/tabBar/order.png",
+        "selectedIconPath": "images/tabBar/order-active.png",
+        "text": "订单"
+      },
+      {
+        "pagePath": "pages/userCenter/index",
+        "iconPath": "images/tabBar/my.png",
+        "selectedIconPath": "images/tabBar/my-active.png",
+        "text": "个人中心"
+      }
+    ]
+  }
+}

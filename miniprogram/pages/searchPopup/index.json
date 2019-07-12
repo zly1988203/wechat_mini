@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "搜索地址",
+  "usingComponents": {
+    "wux-cell-group": "../../dist/cell-group/index",
+    "wux-cell": "../../dist/cell/index",
+    "wux-search-bar": "../../dist/search-bar/index",
+    "wux-tag":"../../dist/tag/index"
+  }
+}

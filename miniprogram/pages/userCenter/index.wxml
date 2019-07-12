@@ -1,0 +1,22 @@
+<view class="page__bd">
+
+    <view class="userinfo">
+        <button
+                open-type="getUserInfo"
+                bindgetuserinfo="onGetUserInfo"
+                class="userinfo-avatar"
+                style="background-image: url({{avatarUrl}})"
+        ></button>
+        <view>
+            <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
+        </view>
+    </view>
+    <view class="page-body">
+            <wux-cell-group >
+                <block wx:for="{{funcList}}" wx:key="">
+                <wux-cell title="{{item.title}}" extra="{{ child.remark }}" is-link url="{{ item.url }}"></wux-cell>
+                </block>
+            </wux-cell-group>
+    </view>
+
+</view>

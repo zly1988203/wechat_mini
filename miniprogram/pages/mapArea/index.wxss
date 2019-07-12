@@ -1,0 +1,57 @@
+.search-input{
+    top: 0;
+    left: 0;
+}
+
+.searchRes{
+    background: #ffffff;
+    /*margin-bottom: 20rpx;*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.searchRes .corver-item{
+    margin: 10rpx;
+    display: flex;
+    height: 80rpx;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.searchRes .corver-item .item-img{
+    width: 25rpx;
+    height: 30rpx;
+}
+
+.searchRes .corver-item .item-content{
+    margin-left: 20rpx;
+    text-align: left;
+    vertical-align: middle;
+    flex:l;
+    width: 100%;
+}
+
+.searchRes .corver-item .item-content .title{
+    font-size: 32rpx;
+}
+
+.searchRes .corver-item .item-content .address{
+    font-size: 24rpx;
+    width: 500rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.searchRes .corver-item button{
+    width: 70rpx;
+    height: 40rpx;
+    font-size: 24rpx;
+    text-align: center;
+    line-height: 40rpx;
+    /*position: absolute;*/
+    top: 10rpx;
+    right: 10rpx;
+}
+

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "运营区域",
+  "usingComponents": {
+    "wux-cell-group": "../../dist/cell-group/index",
+    "wux-cell": "../../dist/cell/index",
+    "wux-search-bar": "../../dist/search-bar/index",
+    "wux-button":"../../dist/button/index"
+  }
+}

@@ -1,0 +1,28 @@
+.page__bd_spacing{
+    text-align: left;
+    background: #ffffff;
+}
+
+.open-city{
+    margin-top: 20rpx;
+}
+
+.open-city .title{
+    font-size: 20rpx;
+}
+
+.open-city .city-name{
+    color: #333;
+    font-weight: 600;
+}
+
+.loca-content{
+    margin-top: 20rpx;
+}
+.wux-cell__text{
+    font-size: 24rpx;
+    margin-bottom: 20rpx;
+}
+.loca-content .tag-list{
+    display: flex;
+}

@@ -1,0 +1,8 @@
+/* pages/callCarService/index.wxss */
+.head{
+    margin: 20rpx;
+}
+
+.service-type{
+    display: flex;
+}
