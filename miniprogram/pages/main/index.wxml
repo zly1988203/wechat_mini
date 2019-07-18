@@ -1,5 +1,7 @@
-<wux-fab-button position="{{ types[typeIndex] }}" theme="{{ colors[colorIndex] }}" direction="{{ dirs[dirIndex] }}" reverse="{{ reverse }}" spaceBetween="{{ spaceBetween }}" sAngle="{{ sAngle }}" eAngle="{{ eAngle }}" buttons="{{ buttons }}"  bind:click="onfabClick" />
 <wux-toast id="wux-toast" />
+
+<wux-fab-button position="bottomRight" theme="balanced" direction="vertical"  spaceBetween="10"
+                buttons="{{ buttons }}" bind:change="onChange" bind:click="onClick" />
 
 <view class="page">
     <view class="head">

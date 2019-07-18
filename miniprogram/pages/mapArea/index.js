@@ -34,6 +34,7 @@ Page({
       },
       polygons: [],
       polyline:[],
+      selAdrsInpId:''
   },
 
     searchByTxt: function (event) {
@@ -131,7 +132,7 @@ Page({
             adrsInfo.arrivelongitude=longitude;
         }
         wx.setStorageSync('adrsInfo',JSON.stringify(adrsInfo));
-        wx.switchTab({
+        wx.navigateTo({
             url:'/pages/main/index',
             success:function(res){
                 let page = getCurrentPages().pop();

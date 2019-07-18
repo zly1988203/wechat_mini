@@ -61,7 +61,17 @@ Page({
         let address = event.currentTarget.dataset.title
         var latitude = event.currentTarget.dataset.latitude;
         var longitude = event.currentTarget.dataset.longitude;
-        var adrsInfo = JSON.parse(wx.getStorageSync('adrsInfo'));
+        var adrsInfo = {}
+        try {
+            var value = wx.getStorageSync('adrsInfo')
+            if (value) {
+                adrsInfo = JSON.parse(value);
+            }
+        } catch (e) {
+            // Do something when catch error
+        }
+
+
         if(this.data.selAdrsInpId == 'departAdrs'){
             adrsInfo.departTitle = city+'-'+address;
             adrsInfo.departlatitude=latitude;
@@ -71,7 +81,10 @@ Page({
             adrsInfo.arrivelatitude=latitude;
             adrsInfo.arrivelongitude=longitude;
         }
-        wx.setStorageSync('adrsInfo',JSON.stringify(adrsInfo));
+        wx.setStorage({
+            key:'adrsInfo',
+            data:JSON.stringify(adrsInfo)
+        });
         this.setData({
             searchKey:'',
             searchRes:[],
@@ -81,13 +94,6 @@ Page({
 
         wx.navigateBack({
             url:'/pages/main/index',
-            success:function(res){
-            let page = getCurrentPages().pop();
-            if(page == undefined || page == null){
-                return
-            }
-            page.onLoad();
-        }
         })
     },
 
@@ -103,7 +109,7 @@ Page({
         }
         wx.setStorageSync('searchArea',JSON.stringify(searchArea));
         wx.navigateTo({
-            url:'/pages/mapArea/index?selAdrsInpId='+that.data.selAdrsInpId
+            url:'/pages/webAreaScope/index?selAdrsInpId='+that.data.selAdrsInpId
         })
     },
 

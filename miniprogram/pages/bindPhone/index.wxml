@@ -1,0 +1,21 @@
+<wux-toast id="wux-toast" />
+<view class="page">
+    <view class="image">
+        <image class="img"   style="background-image: url({{avatarUrl}})"/>
+    </view>
+    <view>
+        <wux-cell-group>
+            <!--<wux-cell>-->
+            <!--&lt;!&ndash;<input placeholder="用户名/手机号码" bindinput="getTel" />&ndash;&gt;-->
+            <!--<wux-input placeholder="请输入手机号码" type='number'   bind:change="getTel"></wux-input>-->
+            <!--</wux-cell>-->
+            <!--<wux-cell>-->
+            <!--<wux-input placeholder="验证码" type='number'  bind:change="getPwd"></wux-input>-->
+            <!--</wux-cell>-->
+            <wux-cell>
+                <wux-button block type="positive" open-type="getPhoneNumber" bind:getphonenumber="getPhoneNumber">绑定手机号码</wux-button>
+            </wux-cell>
+        </wux-cell-group>
+    </view>
+</view>
+

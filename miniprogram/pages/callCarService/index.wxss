@@ -3,6 +3,82 @@
     margin: 20rpx;
 }
 
+.foot{
+    margin: 20rpx;
+    background: #fff;
+}
+
 .service-type{
     display: flex;
+    width: 100%;
+    white-space: nowrap;
+    flex-direction:row;
+}
+.service-type .service-item{
+    width: 200rpx;
+    height: 100%;
+    font-size: 28rpx;
+    text-align: center;
+    padding: 10rpx;
+    display: inline-block;
+}
+
+.service-type .service-item .title{
+
+}
+
+.service-type .service-item .item-img{
+    width: 130rpx;
+    height: 56rpx;
+    margin: auto;
+    padding: 30rpx 0;
+}
+
+.service-type .service-item .price{
+    font-size: 20rpx;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    -ms-flex-align: center;
+    /*text-justify: auto;*/
+}
+
+.ion-forward{
+    line-height: 100%;
+}
+
+.price-txt{
+    /*vertical-align:text-top;*/
+    /*align-self: center;*/
+    margin-right: 20rpx;
+    margin-left: 30rpx;
+}
+
+.btn-row{
+    margin: 10rpx;
+}
+
+.btn-back{
+    font-size: 28rpx;
+    width: 150rpx;
+    height: 80rpx;
+    border: 1rpx solid #f3f3f3;
+    color: #ddd;
+    text-align: center;
+    background: #ffffff;
+}
+.btn-call{
+    font-size: 28rpx;
+    width: 150rpx;
+    height: 80rpx;
+    background: #0c60ee;
+    color: #ffffff;
+    text-align: center;
+}
+
+.btn-tips{
+    font-size: 28rpx;
+    width: 200rpx;
+    height: 80rpx;
+    text-align: center;
 }

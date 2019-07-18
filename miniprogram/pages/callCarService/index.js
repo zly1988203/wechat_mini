@@ -23,6 +23,40 @@ Page({
       },
       options1: data,
       value1: [],
+      carList:[
+          {
+              id:'1',
+              type:'1',
+              title:'拼车',
+              price:'10',
+              imgUrl:'../../images/callCar/stage-one-gray.png'
+
+          },
+          {
+              id:'2',
+              type:'2',
+              title:'快车',
+              price:'19',
+              imgUrl:'../../images/callCar/stage-one-gray.png'
+
+          },
+          {
+              id:'3',
+              type:'3',
+              title:'商务',
+              price:'50',
+              imgUrl:'../../images/callCar/stage-one-gray.png'
+
+          },
+          {
+              id:'4',
+              type:'4',
+              title:'豪华',
+              price:'109',
+              imgUrl:'../../images/callCar/stage-one-gray.png'
+
+          }
+      ]
   },
 
     regionChange: function (e) {
@@ -77,7 +111,7 @@ Page({
             success: function (res) {
                 that.setData({
                     mapWidth: res.windowWidth,
-                    mapHeight: res.windowHeight-40
+                    mapHeight: res.windowHeight/2
                 });
             }
         })
@@ -171,11 +205,36 @@ Page({
         console.log('onChange1', e.detail)
     },
 
+    onSelType:function (e) {
+        var temp_list = []
+        this.data.carList.forEach((item,i)=>{
+            item.imgUrl = '../../images/callCar/stage-one-gray.png';
+            temp_list.push(item);
+        })
+        this.setData({
+            carList: temp_list
+        })
+
+        var index = e.currentTarget.dataset.index;
+        var temp_img = 'carList['+index+'].imgUrl';
+        var temp_price = 'carList['+index+'].price';
+        this.setData({
+            [temp_img]: '../../images/callCar/stage-one-balck.png',
+        })
+        console.log(this.data.carList);
+    },
+
+    getSysPrompt:function () {
+      wx.navigateTo({
+          url:'/pages/sysPrompt/index'
+      })
+    },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+      this.setMapSize();
   },
 
   /**

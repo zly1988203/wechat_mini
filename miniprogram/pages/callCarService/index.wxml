@@ -9,12 +9,6 @@
             <wux-cell hover-class="none">
                 {{adrsInfo.arriveTitle}}
             </wux-cell>
-            <!--<wux-cell hover-class="none">-->
-                <!--<wux-cell title="人数" extra="{{ title1 }}" bind:click="onClick1"></wux-cell>-->
-            <!--</wux-cell>-->
-            <!--<wux-cell hover-class="none">-->
-                <!--<wux-cell title="日期" extra="{{ title1 }}" bind:click="onClick1"></wux-cell>-->
-            <!--</wux-cell>-->
         </wux-cell-group>
 
         <wux-row>
@@ -31,12 +25,48 @@
         <map class='map' id='myMap'  scale="12" longitude="{{longitude}}" latitude="{{latitude}}"
              show-location="true" markers="{{markers}}"
              bindregionchange='regionChange'   style="width: {{mapWidth}}px; height: {{mapHeight}}px;">
-            <cover-view class="service-type">
-                <cover-view>
-
-                </cover-view>
-            </cover-view>
         </map>
-
     </view>
+
+    <!--<view class="service-type">-->
+    <!--<swiper  indicator-dots="false" interval="{{interval}}" duration="{{duration}}">-->
+    <!--<block wx:for="{{carList}}" wx:key="id">-->
+    <!--<swiper-item class="service-item">-->
+    <!--<view class="title">{{item.title}}</view>-->
+    <!--<image class="item-img" src="{{item.imgUrl}}"></image>-->
+    <!--<view class="price">一口价：{{item.price}}</view>-->
+    <!--</swiper-item>-->
+    <!--</block>-->
+    <!--</swiper>-->
+    <!--</view>-->
+
+<view class="foot">
+    <scroll-view class="service-type" scroll-left="left"  scroll-x>
+        <block wx:for="{{carList}}" wx:key="id">
+            <view class="service-item" data-id="{{item.id}}" data-index="{{index}}" bind:tap="onSelType">
+                <view class="title">{{item.title}}</view>
+                <image class="item-img" src="{{item.imgUrl}}"></image>
+                <view class="price">
+                    <view class="price-txt">
+                        一口价：{{item.price}}
+                    </view>
+
+                    <wux-icon slot="right" class="ion-forward"  type="ion ion-ios-arrow-forward" size="14" color="#c3c3c3"></wux-icon>
+                </view>
+            </view>
+        </block>
+    </scroll-view>
+     <wux-row class="btn-row">
+            <wux-col span="4">
+                <button  class="btn-back">返回</button>
+            </wux-col>
+            <wux-col span="4">
+                <button class="btn-call">叫车</button>
+            </wux-col>
+            <wux-col span="4">
+                <button class="btn-tips" bind:tap="getSysPrompt">温馨提示</button>
+            </wux-col>
+        </wux-row>
+</view>
+
 </view>
