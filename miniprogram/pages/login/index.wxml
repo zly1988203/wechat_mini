@@ -1,21 +1,17 @@
 <wux-toast id="wux-toast" />
 <view class="page">
+
     <view class="image">
-        <image class="img" src="https://images.unsplash.com/photo-1551446591-142875a901a1?w=640" />
+        <image class="img"   style="background-image: url({{avatarUrl}})"/>
     </view>
+
     <view>
-        <wux-cell-group>
-            <wux-cell>
-                <!--<input placeholder="用户名/手机号码" bindinput="getTel" />-->
-                <wux-input placeholder="请输入手机号码" type='number'   bind:change="getTel"></wux-input>
-            </wux-cell>
-            <wux-cell>
-                <wux-input placeholder="验证码" type='number'  bind:change="getPwd"></wux-input>
-            </wux-cell>
-            <wux-cell>
-                <wux-button block type="positive" bind:click="login">登录</wux-button>
-            </wux-cell>
-        </wux-cell-group>
+        <!-- 如果只是展示用户头像昵称，可以使用 <open-data /> 组件 -->
+        <!--<open-data type="userAvatarUrl"></open-data>-->
+        <open-data type="userNickName"></open-data>
+        <!-- 需要使用 button 来授权登录 -->
+        <wux-button block type="positive" wx:if="{{canIUse}}" open-type="getUserInfo" bind:getuserinfo="bindGetUserInfo">授权登录</wux-button>
+        <view wx:else>请升级微信版本</view>
     </view>
 </view>
 

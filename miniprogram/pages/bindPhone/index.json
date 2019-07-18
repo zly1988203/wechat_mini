@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "绑定手机号码",
+  "usingComponents": {
+    "wux-button":"../../dist/button/index",
+    "wux-cell-group": "../../dist/cell-group/index",
+    "wux-cell": "../../dist/cell/index",
+    "wux-toast": "../../dist/toast/index"
+  }
+}

@@ -16,4 +16,5 @@
     height: 250rpx;
     margin: 0 auto;
     border-radius: 100%;
+    border: 1rpx solid #fcfcfc;
 }

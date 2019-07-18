@@ -8,13 +8,13 @@ Page({
       flag:false,
       telStr:"",
       pasWd:"",
-      ajaxFlag:true
+      ajaxFlag:true,
+      avatarUrl:'',
+      canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
 
     login(){
         if(this.data.telStr == ""){
-
-
             $wuxToast().show({
                 type: 'forbidden',
                 duration: 1500,
@@ -44,14 +44,14 @@ Page({
         }
 
 
-        if(this.data.pasWd == "" || this.data.pasWd.length != 4){
-            wx.showToast({
-                duration: 1500,
-                image:'../../images/toast/icon-warning.png',
-                title: '请输入4位验证码',
-            })
-            return false;
-        }
+        // if(this.data.pasWd == "" || this.data.pasWd.length != 4){
+        //     wx.showToast({
+        //         duration: 1500,
+        //         image:'../../images/toast/icon-warning.png',
+        //         title: '请输入4位验证码',
+        //     })
+        //     return false;
+        // }
 
         wx.showLoading({
             title:'数据加载中，请稍后...'
@@ -61,7 +61,7 @@ Page({
             wx.hideLoading()
         },1500)
 
-        wx.switchTab({
+        wx.navigateTo({
             url:'/pages/main/index?telStr='+this.data.telStr
         })
 
@@ -80,13 +80,33 @@ Page({
         console.log(this.data.pasWd);
     },
 
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+      wx.getSetting({
+          success: res => {
+          if (res.authSetting['scope.userInfo']) {
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
+          wx.getUserInfo({
+              success: res => {
+              this.setData({
+              avatarUrl: res.userInfo.avatarUrl,
+              userInfo: res.userInfo
+          })
+              console.log(res.userInfo);
+      }
+      })
+      }
+  }
+  })
   },
+    bindGetUserInfo:function (e) {
+        console.log(e.detail.userInfo)
+      wx.navigateTo({
+          url:'/pages/bindPhone/index'
+      })
+    },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
