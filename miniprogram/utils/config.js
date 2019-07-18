@@ -25,7 +25,8 @@ const urlList = {
     serverUtil:serverUtil
 }
 const apiTestHost= 'https://miniprogram.local.olayueche.com';
-const apiTestAppId = 'wxd50b46e68d1958be';
+const accountInfo = wx.getAccountInfoSync();//获取相关信息
+const apiTestAppId= accountInfo.miniProgram.appId;
 const apiTestUrl= {
     apiTestHost,
     apiTestAppId,

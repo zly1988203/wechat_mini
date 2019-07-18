@@ -1,8 +1,8 @@
 //app.js
 const config = require('utils/config')
 App({
-    onLaunch: function () {
-
+    onLaunch: function (ops) {
+        console.log(ops)
     },
     globalData: {
         hasLogin: false,
