@@ -1,0 +1,10 @@
+<view class="page__bd">
+    <view class="page-body">
+        <wux-cell-group>
+            <block wx:for="{{funcList}}" wx:key="">
+                <wux-cell title="{{item.title}}" extra="{{ child.remark }}" is-link url="{{ item.url }}"></wux-cell>
+            </block>
+        </wux-cell-group>
+    </view>
+
+</view>
