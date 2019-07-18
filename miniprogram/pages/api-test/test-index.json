@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "api接口测试",
+  "navigationBarTitleText": "小程序接口测试",
   "usingComponents": {
     "wux-cell-group": "../../dist/cell-group/index",
     "wux-cell": "../../dist/cell/index"

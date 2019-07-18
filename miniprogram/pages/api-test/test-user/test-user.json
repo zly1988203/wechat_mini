@@ -1,7 +1,7 @@
 {
   "navigationBarTitleText": "用户信息接口测试",
   "usingComponents": {
-    "wux-cell-group": "../../dist/cell-group/index",
-    "wux-cell": "../../dist/cell/index"
+    "wux-icon": "../../../dist/icon/index",
+    "wux-button": "../../../dist/button/index"
   }
 }

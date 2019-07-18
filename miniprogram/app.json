@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/api-test/test-index",
     "pages/main/index",
     "pages/login/index",
     "pages/bindPhone/index",
@@ -13,8 +14,8 @@
     "pages/webAreaScope/index",
     "pages/sysPrompt/index",
     "pages/orderTrip/index",
-    "pages/callCarService/index"
-    
+    "pages/callCarService/index",
+    "pages/api-test/test-user/test-user"
   ],
   "permission": {
     "scope.userLocation": {
