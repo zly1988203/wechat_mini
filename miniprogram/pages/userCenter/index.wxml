@@ -22,7 +22,7 @@
                 <wux-icon type="ios-airplane" />
                 <view>待支付</view>
             </wux-grid>
-            <wux-grid>
+            <wux-grid >
                 <wux-icon type="ios-albums" />
                 <view>待出行</view>
             </wux-grid>
@@ -42,6 +42,14 @@
             <wux-grid>
                 <wux-icon type="ios-albums" />
                 <view>设置</view>
+            </wux-grid>
+        </wux-grids>
+
+        <view class="sub-title">接口测试</view>
+        <wux-grids>
+            <wux-grid bind:click="onApiTest">
+                <wux-icon type="ios-albums"/>
+                <view>接口测试</view>
             </wux-grid>
         </wux-grids>
     </view>

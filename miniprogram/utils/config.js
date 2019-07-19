@@ -24,4 +24,16 @@ const urlList = {
     getRegionLineArea: serverUtil.devUrl + '/innerCity/optimize/getRegionLineArea',
     serverUtil:serverUtil
 }
-module.exports = urlList;
+const apiTestHost= 'https://miniprogram.local.olayueche.com';
+const accountInfo = wx.getAccountInfoSync();//获取相关信息
+const apiTestAppId= accountInfo.miniProgram.appId;
+const apiTestUrl= {
+    apiTestHost,
+    apiTestAppId,
+    openIdUrl:`${apiTestHost}/wechat/mini/user/${apiTestAppId}/openid`,
+    userLoginUrl:`${apiTestHost}/wechat/mini/user/${apiTestAppId}/login`,
+    userInfoUrl:`${apiTestHost}/wechat/mini/user/${apiTestAppId}/info`,
+    userPhoneUrl:`${apiTestHost}/wechat/mini/user/${apiTestAppId}/phone`
+}
+
+module.exports = {urlList,apiTestUrl};
