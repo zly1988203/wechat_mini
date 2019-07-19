@@ -54,31 +54,26 @@
     margin-left: 30rpx;
 }
 
-.btn-row{
-    margin: 10rpx;
-}
-
-.btn-back{
-    font-size: 28rpx;
+.foot .btn{
     width: 150rpx;
     height: 80rpx;
-    border: 1rpx solid #f3f3f3;
-    color: #ddd;
-    text-align: center;
-    background: #ffffff;
-}
-.btn-call{
-    font-size: 28rpx;
-    width: 150rpx;
-    height: 80rpx;
+    line-height: 80rpx;
     background: #0c60ee;
     color: #ffffff;
     text-align: center;
+    vertical-align: middle;
+    font-size: 32rpx;
+}
+
+.btn-back{
+    border: 1rpx solid #f3f3f3;
+    color: #ddd;
+    background:#ffffff
+}
+.btn-call{
+    background: #0c60ee;
 }
 
 .btn-tips{
-    font-size: 28rpx;
-    width: 200rpx;
-    height: 80rpx;
     text-align: center;
 }

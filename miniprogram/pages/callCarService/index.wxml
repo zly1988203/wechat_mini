@@ -1,5 +1,5 @@
 <wux-select id="sel-person" />
-<wux-cascader visible="{{ visible1 }}" default-value="{{ value1 }}" title="所在地区" options="{{ options1 }}" bind:close="onClose1" bind:change="onChange1" />
+<wux-cascader visible="{{ visible1 }}" default-value="{{ value1 }}" title="选择时间" options="{{ options1 }}" bind:close="onClose1" bind:change="onChange1" />
 <view class="page">
     <view class="head">
         <wux-cell-group>
@@ -58,10 +58,10 @@
     </scroll-view>
      <wux-row class="btn-row">
             <wux-col span="4">
-                <button  class="btn-back">返回</button>
+                <button  class="btn btn-back">返回</button>
             </wux-col>
             <wux-col span="4">
-                <button class="btn-call">叫车</button>
+                <button class="btn btn-call" bind:tap="onTrip">确定</button>
             </wux-col>
             <wux-col span="4">
                 <button class="btn-tips" bind:tap="getSysPrompt">温馨提示</button>

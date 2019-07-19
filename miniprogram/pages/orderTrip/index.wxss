@@ -3,3 +3,23 @@
     margin: 20rpx;
     font-size: 28rpx;
 }
+
+.foot{
+    width: 100%;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 20rpx;
+}
+
+.foot .btn{
+    width: 150rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    background: #0c60ee;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 32rpx;
+}
