@@ -24,7 +24,7 @@
 
     </view>
     <view class="page__bd page__bd_spacing">
-        <wux-button block type="positive" bind:click="getOpenId">获取openId</wux-button>
+        <wux-button block  type="positive" bind:click="getOpenId">获取openId</wux-button>
         <wux-button block type="positive" open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取用户信息</wux-button>
         <wux-button block type="positive" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取用户手机号
         </wux-button>
