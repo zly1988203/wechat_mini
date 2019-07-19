@@ -1,3 +1,4 @@
+<wux-actionsheet id="wux-actionsheet" />
 <view class="page">
     <view class="head">
         <wux-cell-group>
@@ -10,5 +11,14 @@
         </wux-cell-group>
 
     </view>
-    <map id="loactionMap"  scale="14" show-location="true" markers = "{{markers}}" style="width: {{mapWidth}}px; height: {{mapHeight}}px;" bindregionchange="regionChange"></map>
+    <map id="loactionMap"  scale="14" show-location="true" markers = "{{markers}}"
+         polyline = "{{polyline}}" longitude="{{longitude}}" latitude="{{latitude}}"
+         style="width: {{mapWidth}}px; height: {{mapHeight}}px;" >
+
+        <cover-view class="foot" hidden="{{visable}}">
+            <button class="btn" bind:tap="onTrip">返回</button>
+            <button class="btn" bind:tap="onTrip">确定</button>
+            <button class="btn" bind:tap="showMore">更多</button>
+        </cover-view>
+    </map>
 </view>

@@ -26,6 +26,11 @@ Page({
 
     decryptionPhoneNumber:function (appCode) {
       var that = this;
+        wx.reLaunch({
+            url:'/pages/main/index'
+        })
+        return;
+
         wx.request({
             url:'',
             data:{

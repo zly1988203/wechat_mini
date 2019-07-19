@@ -1,8 +1,7 @@
 {
   "pages": [
-    "pages/api-test/test-index",
-    "pages/main/index",
     "pages/login/index",
+    "pages/main/index",
     "pages/bindPhone/index",
     "pages/orders/index",
     "pages/userCenter/index",
