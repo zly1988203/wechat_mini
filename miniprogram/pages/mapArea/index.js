@@ -1,7 +1,7 @@
 // 引入SDK核心类
 var QQMapWX = require('../../libs/qqmap-wx-jssdk.min.js');
 var qqmapsdk;
-const urlList = require('../../utils/config.js');
+const urlList = require('../../utils/config.js').urlList;
 Page({
 
   /**

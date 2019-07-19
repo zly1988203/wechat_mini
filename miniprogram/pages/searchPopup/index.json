@@ -4,6 +4,7 @@
     "wux-cell-group": "../../dist/cell-group/index",
     "wux-cell": "../../dist/cell/index",
     "wux-search-bar": "../../dist/search-bar/index",
-    "wux-tag":"../../dist/tag/index"
+    "wux-tag":"../../dist/tag/index",
+    "wux-loading": "../../dist/loading/index"
   }
 }

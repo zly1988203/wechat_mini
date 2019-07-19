@@ -1,7 +1,9 @@
+import { $wuxLoading } from '../../dist/index'
 // 引入SDK核心类
 var QQMapWX = require('../../libs/qqmap-wx-jssdk.min.js');
 var qqmapsdk;
-const urlList = require('../../utils/config.js');
+const urlList = require('../../utils/config.js').urlList;
+
 Page({
 
   /**
@@ -118,6 +120,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+      this.$wuxLoading = $wuxLoading()
+      this.$wuxLoading.show({
+          text: '数据加载中',
+      })
+
       // 实例化API核心类
       qqmapsdk = new QQMapWX({
           key: 'U7TBZ-MFHAS-5SQON-6PXLT-VNENE-2OB3Z'
@@ -152,6 +160,7 @@ Page({
               'Accept': 'application/json'
           },
           success:  function (res){
+              _this.$wuxLoading.hide()
               if(res.data.code == 0){
                   var areaList = [];
                   if (_this.data.selAdrsInpId == 'departAdrs') {

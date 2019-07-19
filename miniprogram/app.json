@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/login/index",
     "pages/main/index",
+    "pages/login/index",
+
     "pages/bindPhone/index",
     "pages/orders/index",
     "pages/userCenter/index",
@@ -14,6 +15,7 @@
     "pages/sysPrompt/index",
     "pages/orderTrip/index",
     "pages/callCarService/index",
+    "pages/api-test/test-index",
     "pages/api-test/test-user/test-user"
   ],
   "permission": {

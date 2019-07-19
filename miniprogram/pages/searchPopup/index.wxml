@@ -1,3 +1,4 @@
+<wux-loading id="wux-loading" />
 <view class="page">
     <view>
         <wux-search-bar class="search-input" show-cancel value="{{searchObj.searchKey}}" controlled  focus bind:change="searchByTxt" bind:cancel="searchCancle"/>

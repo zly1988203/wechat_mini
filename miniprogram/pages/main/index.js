@@ -3,7 +3,6 @@ import { $wuxToast } from '../../dist/index'
 // / 引入SDK核心类
 
 var QQMapWX = require('../../libs/qqmap-wx-jssdk.min.js');
-const urlList = require('../../utils/config.js');
 var qqmapsdk;
 
 const buttons = [

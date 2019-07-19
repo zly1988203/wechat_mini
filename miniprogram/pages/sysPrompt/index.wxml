@@ -1,4 +1,7 @@
 <!--pages/sysPrompt/index.wxml-->
 <view>
-    温馨提示
+    <div id="cnblogs_post_body" class="blogpost-body">
+        <h1>小程序之动态修改页面标题</h1>
+
+    </div>
 </view>

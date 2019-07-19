@@ -22,7 +22,8 @@ const urlList = {
     advertPicListUrl: serverUtil.devUrl + '/advertPicList',//轮播列表
     getOpenAreas: serverUtil.devUrl + '/busline/optimized/getOpenAreas',
     getRegionLineArea: serverUtil.devUrl + '/innerCity/optimize/getRegionLineArea',
-    serverUtil:serverUtil
+    serverUtil:serverUtil,
+    token:''
 }
 const apiTestHost= 'https://miniprogram.local.olayueche.com';
 const accountInfo = wx.getAccountInfoSync();//获取相关信息
