@@ -13,6 +13,7 @@
     width: 100%;
     white-space: nowrap;
     flex-direction:row;
+    margin-bottom: 20rpx;
 }
 .service-type .service-item{
     width: 200rpx;
@@ -55,9 +56,9 @@
 }
 
 .foot .btn{
-    width: 150rpx;
-    height: 80rpx;
-    line-height: 80rpx;
+    width: 140rpx;
+    height: 70rpx;
+    line-height: 70rpx;
     background: #0c60ee;
     color: #ffffff;
     text-align: center;
@@ -68,7 +69,7 @@
 .btn-back{
     border: 1rpx solid #f3f3f3;
     color: #ddd;
-    background:#ffffff
+    background:#ffffff;
 }
 .btn-call{
     background: #0c60ee;
@@ -76,4 +77,6 @@
 
 .btn-tips{
     text-align: center;
+    font-size: 32rpx;
+    color: #0c60ee
 }

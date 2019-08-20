@@ -13,13 +13,14 @@
                            data-title="{{item.title}}" data-address="{{item.address}}"
                            data-district ="{{item.ad_info.district}}"
                            data-city="{{item.ad_info.city}}"
+                           data-latitude="{{item.location.lat}}" data-longitude="{{item.location.lng}}"
                            bind:click="onSearchAdrs" ></wux-cell>
             </block>
 
         </wux-cell-group>
     </view>
 
-    <view class="loca-content">
+    <view class="loca-content" hidden="{{localVisable}}">
         <wux-cell-group>
             <wux-cell title="当前位置">
                 <view class="tag-list">
@@ -30,7 +31,7 @@
             </wux-cell>
         </wux-cell-group>
     </view>
-    <view class="page__bd page__bd_spacing open-city">
+    <view class="page__bd page__bd_spacing open-city" hidden="{{localVisable}}">
         <view class="sub-title title">已开通城市</view>
         <block wx:for="{{areaList}}" wx:key="id">
             <view class="sub-title city-name">{{item.name}}</view>

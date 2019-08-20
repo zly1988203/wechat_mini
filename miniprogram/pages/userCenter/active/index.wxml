@@ -1,2 +1,3 @@
-<!--pages/userCenter/active/index.wxml-->
-<text>pages/userCenter/active/index.wxml</text>
+<view>
+    <web-view src="{{web_url}}" bindmessage="onMessage"></web-view>
+</view>

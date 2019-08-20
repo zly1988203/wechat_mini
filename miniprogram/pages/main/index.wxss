@@ -23,11 +23,15 @@
     display: flex;
 }
 
-.search-input{
+.search-bar .search-input button{
     text-align: left;
     color: black;
+    padding: 0;
 }
 
+.wux-cell{
+    height: 100rpx;
+}
 
 wux-cell image{
     width: 30rpx!important;

@@ -1,0 +1,15 @@
+/* pages/sysUserList/index.wxss */
+.user-item{
+    display: flex;
+}
+
+.user-item .item-select{
+    vertical-align: middle;
+    align-items: center;
+    justify-items: center;
+    margin-top: 50rpx;
+}
+
+.user-item .item-content{
+    margin-left: 20rpx;
+}

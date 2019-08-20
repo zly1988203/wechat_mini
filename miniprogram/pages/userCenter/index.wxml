@@ -14,7 +14,7 @@
     <view class="page__bd">
         <view class="sub-title">我的订单</view>
         <wux-grids>
-            <wux-grid>
+            <wux-grid is-link url="/pages/main/index">
                 <wux-icon type="ios-airplane" />
                 <view>全部订单</view>
             </wux-grid>
@@ -35,7 +35,11 @@
                 <wux-icon type="md-filing" />
                 <view>优惠券</view>
             </wux-grid>
-            <wux-grid>
+            <wux-grid bind:click="onInvite">
+                <wux-icon type="md-filing" />
+                <view>邀请有礼</view>
+            </wux-grid>
+            <wux-grid is-link url="/pages/userCenter/active/index">
                 <wux-icon type="ios-airplane" />
                 <view>活动</view>
             </wux-grid>

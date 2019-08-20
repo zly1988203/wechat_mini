@@ -1,9 +1,7 @@
-var QQMapWX = require('../../libs/qqmap-wx-jssdk.min.js');
-var qqmapsdk;
-const urlList = require('../../utils/config.js').urlList;
 import { $wuxSelect } from '../../dist/index'
 import data from './data'
-
+var QQMapWX = require('../../libs/qqmap-wx-jssdk.min.js');
+var qqmapsdk;
 Page({
 
   /**
@@ -145,7 +143,7 @@ Page({
           'adrsInfo.arriveTitle':adrsInfo.arriveTitle,
       })
       // this.getCurrLocation();
-      this.setMapSize();
+      // this.setMapSize();
       this.showMarkers();
       // this.getCenterLocation();
   },
@@ -171,6 +169,11 @@ Page({
     },
 
     onPersonClick:function() {
+        wx.navigateTo({
+            url:'/pages/sysUserList/index'
+        });
+
+        return;
         $wuxSelect('#sel-person').open({
             value: this.data.personInfo.value,
             options: [
@@ -183,14 +186,14 @@ Page({
             ],
             onConfirm: (value, index, options) => {
             console.log('onConfirm', value, index, options)
-        if (index !== -1) {
-            this.setData({
-                'personInfo.value': value,
-                'personInfo.title': options[index],
-            })
-        }
-    },
-    })
+            if (index !== -1) {
+                this.setData({
+                    'personInfo.value': value,
+                    'personInfo.title': options[index],
+                })
+            }
+         }
+     })
     },
 
     onDateOpen: function () {

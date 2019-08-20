@@ -1,26 +1,18 @@
-// pages/userCenter/active/index.js
+// pages/couponList/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      web_url:''
+
   },
-
-    onMessage:function (e) {
-        console.log(e.detail.data);
-
-    },
-
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      this.setData({
-          web_url:'https://passwechat.wx.local.olayueche.com/passenger/invite.html',
-      })
+
   },
 
   /**

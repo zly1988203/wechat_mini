@@ -26,6 +26,7 @@ Page({
           latitude:0,
           longitude:0,
       },
+      localVisable:false
   },
 
     searchByTxt: function (event) {
@@ -39,7 +40,8 @@ Page({
             success: function (res) { //搜索成功后的回调
                 _this.setData({
                     searchRes:res.data,
-                    'searchObj.isShow':false
+                    'searchObj.isShow':false,
+                    localVisable:true,
                 })
             },
             fail: function (res) {
@@ -53,7 +55,8 @@ Page({
     searchCancle:function (event) {
         this.setData({
             searchRes:[],
-            'searchObj.isShow':true
+            'searchObj.isShow':true,
+            localVisable:false,
         })
     },
 

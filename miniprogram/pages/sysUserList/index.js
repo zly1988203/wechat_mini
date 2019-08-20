@@ -1,26 +1,40 @@
-// pages/userCenter/active/index.js
+// pages/sysUserList/index.js
+import data from './data.js'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      web_url:''
+    userList:data,
+      toView: 'red',
+      scrollTop: 100,
+      value1: ['1'],
   },
 
-    onMessage:function (e) {
-        console.log(e.detail.data);
+    onChange(field, e) {
+        const { value } = e.detail
+        const data = this.data[field]
+        const index = data.indexOf(value)
+        const current = index === -1 ? [...data, value] : data.filter((n) => n !== value)
 
+        this.setData({
+            [field]: current,
+        })
+
+        console.log('checkbox发生change事件，携带value值为：', e.detail.value)
     },
+    onChange1(e) {
+        this.onChange('value1', e)
+    },
+
 
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      this.setData({
-          web_url:'https://passwechat.wx.local.olayueche.com/passenger/invite.html',
-      })
+
   },
 
   /**

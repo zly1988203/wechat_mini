@@ -1,0 +1,25 @@
+<!--pages/sysUserList/index.wxml-->
+<view class="page">
+    <scroll-view scroll-y  bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+
+        <wux-cell-group>
+       <block wx:for="{{userList}}" wx:key="id">
+           <wux-cell>
+               <view class="user-item">
+                   <wux-selectable color="balanced" value="5"  class="item-select"/>
+                   <view class="item-content">
+                       <view>{{item.name}}</view>
+                       <view>{{item.phone}}</view>
+                       <view> {{item.idCard}}</view>
+                   </view>
+               </view>
+
+
+           </wux-cell>
+       </block>
+        </wux-cell-group>
+    </scroll-view>
+    <wux-checkbox-group name="a" value="{{ value1 }}" title="Default" bind:change="onChange1">
+    <wux-checkbox color="assertive" title="Assertive" value="7" />
+    </wux-checkbox-group>
+</view>
